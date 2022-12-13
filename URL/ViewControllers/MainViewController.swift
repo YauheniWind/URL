@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
 
     let linkWiki = "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Tiger_King/daily/20210901/20210930"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchHolidays()
@@ -25,8 +26,8 @@ class MainViewController: UIViewController {
             }
 
             do {
-                let dog = try JSONDecoder().decode(Items.self, from: data)
-                print(dog)
+                let wikiItems = try JSONDecoder().decode(WiKiitems.self, from: data)
+                print(wikiItems)
             } catch let error {
                 print(error)
             }

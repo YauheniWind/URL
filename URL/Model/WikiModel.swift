@@ -16,6 +16,6 @@ struct WiKi: Decodable {
     let views: Int
 }
 
-struct Items: Decodable {
+struct WiKiitems: Decodable {
     let items: [WiKi]
 }
