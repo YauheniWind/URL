@@ -13,10 +13,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchHolidays()
+        fetchWiKi()
     }
 
-    private func fetchHolidays() {
+    private func fetchWiKi() {
         guard let url = URL(string: linkWiki) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
